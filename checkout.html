@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Checkout | ÉLIXIR
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="checkout.css"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            ÉLIXIR
+        </div>
+
+        <a href="index.html" class="back-button">
+
+            ← Voltar
+
+        </a>
+
+    </header>
+
+    <!-- CHECKOUT -->
+
+    <section class="checkout-section">
+
+        <!-- ESQUERDA -->
+
+        <div class="checkout-left">
+
+            <h1>
+                Finalizar Compra
+            </h1>
+
+            <p class="subtitle">
+
+                Confira seus produtos
+                e finalize sua experiência premium.
+
+            </p>
+
+            <!-- PRODUTOS -->
+
+            <div class="cart-items"></div>
+
+        </div>
+
+        <!-- DIREITA -->
+
+        <div class="checkout-right">
+
+            <!-- RESUMO -->
+
+            <div class="summary-card">
+
+                <h2>
+                    Resumo
+                </h2>
+
+                <div class="summary-line">
+
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <strong class="cart-total">
+
+                        R$ 0
+
+                    </strong>
+
+                </div>
+
+                <div class="summary-line">
+
+                    <span>
+                        Frete
+                    </span>
+
+                    <strong id="shippingPrice">
+
+                        R$ 40
+
+                    </strong>
+
+                </div>
+
+                <!-- CUPOM -->
+
+<div class="coupon-area">
+
+    <input
+        type="text"
+        id="couponInput"
+        placeholder="Cupom de desconto"
+    >
+
+    <button onclick="applyCoupon()">
+
+        Aplicar
+
+    </button>
+
+</div>
+
+<div
+    class="coupon-message"
+    id="couponMessage"
+></div>
+
+                <div class="summary-line total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="finalTotal">
+
+                        R$ 0
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+            <!-- FRETE -->
+
+            <div class="shipping-card">
+
+                <h3>
+                    Calcular Frete
+                </h3>
+
+                <input
+                    type="text"
+                    id="cep"
+                    placeholder="Digite seu CEP"
+                >
+
+                <button onclick="calculateShipping()">
+
+                    Calcular
+
+                </button>
+
+            </div>
+
+            <!-- PAGAMENTO -->
+
+            <div class="payment-card">
+
+    <h3>
+        Pagamento
+    </h3>
+
+    <!-- MÉTODOS -->
+
+    <div class="payment-methods">
+
+        <button
+            type="button"
+            class="method-btn active"
+            onclick="selectPayment('card')"
+            id="cardMethod"
+        >
+
+            💳 Cartão
+
+        </button>
+
+        <button
+            type="button"
+            class="method-btn"
+            onclick="selectPayment('pix')"
+            id="pixMethod"
+        >
+
+            PIX
+
+        </button>
+
+    </div>
+
+    <!-- FORM -->
+
+    <form id="payment-form">
+
+        <!-- CARTÃO -->
+
+        <div id="cardPayment">
+
+            <input
+                type="text"
+                placeholder="Nome no cartão"
+                required
+            >
+
+            <input
+                type="text"
+                placeholder="Número do cartão"
+                required
+            >
+
+            <div class="row">
+
+                <input
+                    type="text"
+                    placeholder="Validade"
+                    required
+                >
+
+                <input
+                    type="text"
+                    placeholder="CVV"
+                    required
+                >
+
+            </div>
+
+        </div>
+
+        <!-- PIX -->
+
+        <div
+            class="pix-area"
+            id="pixArea"
+            style="display:none;"
+        >
+
+            <div class="pix-box">
+
+                <h4>
+                    PIX Copia e Cola
+                </h4>
+
+                <p id="pixCode">
+
+00020126580014BR.GOV.BCB.PIX0136elixir.perfumes@email.com5204000053039865802BR5920ELIXIR PERFUMARIA6009SAO PAULO62070503***6304ABCD
+
+                </p>
+
+                <button
+    type="button"
+    class="copy-pix"
+    onclick="copyPix()"
+>
+
+    <span class="pix-btn-text">
+
+        Copiar Código PIX
+
+    </span>
+
+</button>
+
+<div
+    class="pix-toast"
+    id="pixToast"
+>
+
+    <span>
+
+        ✓ Código PIX copiado
+
+    </span>
+
+</div>
+                <button
+    type="button"
+    class="confirm-pix"
+    onclick="confirmPixPayment()"
+>
+
+    Já Realizei o Pagamento
+
+</button>
+
+<div
+    class="pix-status"
+    id="pixStatus"
+></div>
+
+            </div>
+
+        </div>
+
+        <!-- BOTÃO -->
+
+        <button
+            type="submit"
+            class="pay-button"
+        >
+
+            Confirmar Pagamento
+
+        </button>
+
+    </form>
+
+</div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

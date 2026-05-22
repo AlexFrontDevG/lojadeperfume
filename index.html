@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ÉLIXIR PARFUMS</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="logo">
+      ÉLIXIR
+    </div>
+
+   <nav>
+
+  <a href="#home">Início</a>
+
+  <a href="#brands">Marcas</a>
+
+  <a href="#products">Perfumes</a>
+
+  <a href="#about">Sobre</a>
+
+  <a href="#contact">Contato</a>
+
+</nav>
+
+   <div class="cart-button" onclick="openCart()">
+
+🛒
+
+<span class="cart-count">
+0
+</span>
+
+</div>
+
+  </header>
+
+  <!-- HERO -->
+<!-- MARCAS -->
+
+<section class="brands-section" id="brands">
+
+  <div class="section-title">
+
+    <span>MARCAS EXCLUSIVAS</span>
+
+    <h2>Escolha sua assinatura olfativa</h2>
+
+  </div>
+
+  <div class="brands-grid">
+
+    <!-- DIOR -->
+
+    <div class="brand-card" onclick="window.location.href='dior.html'">
+
+      <img src="https://img.lojasrenner.com.br/item/539110289/original/1.jpg">
+
+      <div class="brand-overlay">
+
+        <h3>Dior</h3>
+
+      </div>
+
+    </div>
+
+    <!-- CHANEL -->
+
+    <div class="brand-card" onclick="window.location.href='chanel.html'">
+
+      <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="brand-overlay">
+
+        <h3>Chanel</h3>
+
+      </div>
+
+    </div>
+
+    <!-- TOM FORD -->
+
+    <div class="brand-card" onclick="window.location.href='tomford.html'">
+
+      <img src="https://shopluxo.vtexassets.com/arquivos/ids/225805/PERFUME-TOM-FORD-FUCKING-FABULOUS-MASCULINO-EAU-DE-PARFUM-100ml.jpg?v=637940267588330000">
+
+      <div class="brand-overlay">
+
+        <h3>Tom Ford</h3>
+
+      </div>
+
+    </div>
+
+    <!-- CREED -->
+
+    <div class="brand-card" onclick="window.location.href='creed.html'">
+
+      <img src="https://shopluxo.vtexassets.com/arquivos/ids/211201-650-auto/perfume-creed-aventus-eau-de-parfum-masculino-100ml.jpg?v=637296511749230000">
+
+      <div class="brand-overlay">
+
+        <h3>Creed</h3>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  
+
+</section>
+
+  <section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <span class="mini-title">
+      PERFUMES EXCLUSIVOS
+    </span>
+
+    <h1>
+      Sua presença começa pela fragrância.
+    </h1>
+
+    <p>
+      Descubra perfumes intensos, sofisticados e inesquecíveis
+      criados para pessoas que querem marcar presença.
+    </p>
+
+    <div class="hero-buttons">
+
+      <a href="#products" class="btn">
+        Explorar Coleção
+      </a>
+
+      <a href="#about" class="btn-outline">
+        Saiba Mais
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="hero-image">
+
+    <img src="https://i.pinimg.com/736x/9b/2a/0d/9b2a0d3edc0be557dab11f5facd752a6.jpg">
+
+  </div>
+
+</section>
+<!-- BENEFÍCIOS -->
+
+<section class="benefits-section">
+
+  <div class="benefit-card">
+
+    <h3>Fragrâncias Exclusivas</h3>
+
+    <p>
+      Perfumes selecionados das marcas mais desejadas do mundo.
+    </p>
+
+  </div>
+
+  <div class="benefit-card">
+
+    <h3>Entrega Premium</h3>
+
+    <p>
+      Envio rápido, seguro e embalagens sofisticadas.
+    </p>
+
+  </div>
+
+  <div class="benefit-card">
+
+    <h3>Luxo e Sofisticação</h3>
+
+    <p>
+      Cada fragrância transmite presença e personalidade.
+    </p>
+
+  </div>
+
+</section>
+
+  <!-- PRODUTOS -->
+
+  <section class="products-section" id="products">
+
+    <h2>Nossas Fragrâncias</h2>
+
+    <div class="products-grid">
+
+      <!-- PRODUTO 1 -->
+
+      <div class="product-card">
+
+        <img src="https://cdn.awsli.com.br/300x300/25/25674/produto/45169911/369d419074.jpg">
+
+        <h3>Bleu de Chanel</h3>
+
+        <p class="price">
+          R$ 899
+        </p>
+
+       <button onclick="addToCart(
+'Bleu de Chanel',
+899,
+'https://cdn.awsli.com.br/300x300/25/25674/produto/45169911/369d419074.jpg'
+)">
+Adicionar ao Carrinho
+</button>
+      </div>
+
+      <!-- PRODUTO 2 -->
+
+      <div class="product-card">
+
+        <img src="https://www.creedperfume.com.au/cdn/shop/files/royaloud100mlpdp_800x.png?v=1739488865">
+
+        <h3>Creed Royal Oud</h3>
+
+        <p class="price">
+          R$ 1.290
+        </p>
+<button onclick="addToCart(
+'Creed Royal Oud',
+1290,
+'https://www.creedperfume.com.au/cdn/shop/files/royaloud100mlpdp_800x.png?v=1739488865'
+)">
+Adicionar ao Carrinho
+</button>
+
+      </div>
+
+      <!-- PRODUTO 3 -->
+
+      <div class="product-card">
+
+        <img src="https://i5.walmartimages.com/asr/b01f0675-7507-4d5e-b90a-a9acad0276f4.56137a370ca3a2163051c6ea8d4f5c6f.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF">
+
+        <h3>Lacoste Noir Intense</h3>
+
+        <p class="price">
+          R$ 749
+        </p>
+
+       <button onclick="addToCart(
+'Lacoste Noir Intense',
+749,
+'https://i5.walmartimages.com/asr/b01f0675-7507-4d5e-b90a-a9acad0276f4.56137a370ca3a2163051c6ea8d4f5c6f.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF'
+)">
+Adicionar ao Carrinho
+</button>
+
+      </div>
+
+      <!-- PRODUTO 4 -->
+
+      <div class="product-card">
+
+        <img src="https://http2.mlstatic.com/D_NQ_NP_918010-MLU78194386337_082024-O.webp">
+
+        <h3>Sospiro Vibrato</h3>
+
+        <p class="price">
+          R$ 3.700
+        </p>
+
+        <button onclick="addToCart(
+'Sospiro Vibrato',
+3700,
+'https://http2.mlstatic.com/D_NQ_NP_918010-MLU78194386337_082024-O.webp'
+)">
+Adicionar ao Carrinho
+</button>
+
+      </div>
+
+      <!-- PRODUTO 5 -->
+
+      <div class="product-card">
+
+        <img src="https://jeanmarcparis.com/cdn/shop/files/jean-marc-paris-midnight-velvet-men-cologne-fragrance-eau-de-toilette-100ml-bottle-carton_530x@2x.jpg?v=1767667947">
+
+        <h3>Midnight Velvet</h3>
+
+        <p class="price">
+          R$ 679
+        </p>
+
+       <button onclick="addToCart(
+'Midnight Velvet',
+679,
+'https://jeanmarcparis.com/cdn/shop/files/jean-marc-paris-midnight-velvet-men-cologne-fragrance-eau-de-toilette-100ml-bottle-carton_530x@2x.jpg?v=1767667947'
+)">
+Adicionar ao Carrinho
+</button>
+      </div>
+
+      <!-- PRODUTO 6 -->
+
+      <div class="product-card">
+
+        <img src="https://lorenalaing.com/cdn/shop/products/EDP02_EaudeParfum_Hierba-Nera_03_900x.png?v=1752509647">
+
+        <h3>Hierba Nera de Coreterno</h3>
+
+        <p class="price">
+          1.990
+        </p>
+
+       <button onclick="addToCart(
+'Hierba Nera de Coreterno',
+1990,
+'https://lorenalaing.com/cdn/shop/products/EDP02_EaudeParfum_Hierba-Nera_03_900x.png?v=1752509647'
+)">
+Adicionar ao Carrinho
+</button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- BANNER -->
+
+<section class="lux-banner">
+
+  <div class="banner-content">
+
+    <span>NOVA COLEÇÃO</span>
+
+    <h2>
+      Aromas que definem sua identidade.
+    </h2>
+
+    <p>
+      Experimente fragrâncias sofisticadas com notas amadeiradas,
+      orientais e intensas.
+    </p>
+
+    <a href="#products" class="btn">
+      Comprar Agora
+    </a>
+
+  </div>
+
+</section>
+
+  <!-- SOBRE -->
+
+  <section class="about-section" id="about">
+
+    <h2>Sobre a ÉLIXIR</h2>
+
+    <p>
+      Criamos fragrâncias exclusivas para pessoas que desejam marcar presença.
+      Nossos perfumes unem luxo, elegância e personalidade.
+    </p>
+
+  </section>
+<!-- DEPOIMENTOS -->
+
+<section class="testimonials-section">
+
+  <h2>O que nossos clientes dizem</h2>
+
+  <div class="testimonials-grid">
+
+    <div class="testimonial-card">
+
+      <p>
+        “A qualidade das fragrâncias é absurda. Parece uma loja internacional.”
+      </p>
+
+      <h4>— Nicolle Brandão</h4>
+
+    </div>
+
+    <div class="testimonial-card">
+
+      <p>
+        “O perfume fixa MUITO. Recebi elogios no primeiro dia.”
+      </p>
+
+      <h4>— Sofia Cavalcante</h4>
+
+    </div>
+
+    <div class="testimonial-card">
+
+      <p>
+        “Design elegante e experiência premium do início ao fim.”
+      </p>
+
+      <h4>— Nicolas Del Caro</h4>
+
+    </div>
+
+  </div>
+
+</section>
+  <!-- CONTATO -->
+
+  <section class="contact-section" id="contact">
+
+    <h2>Contato</h2>
+
+    <form id="contact-form">
+
+      <input type="text" placeholder="Seu nome" required>
+
+      <input type="email" placeholder="Seu email" required>
+
+      <textarea placeholder="Sua mensagem"></textarea>
+
+      <button type="submit">
+        Enviar
+      </button>
+
+    </form>
+
+  </section>
+
+  <!-- CARRINHO -->
+
+  <div class="cart-sidebar" id="cart-sidebar">
+
+    <div class="cart-top">
+
+      <h2>Carrinho</h2>
+
+      <span onclick="closeCart()">
+        ✖
+      </span>
+
+    </div>
+
+    <div id="cart-items"></div>
+
+    <div class="cart-bottom">
+
+      <h3 id="cart-total">
+        Total: R$ 0
+      </h3>
+
+      <button class="finish-button">
+        Finalizar Compra
+      </button>
+
+    </div>
+
+  </div>
+
+<script src="script.js"></script>
+
+<!-- MINI CART OVERLAY -->
+
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<!-- MINI CART -->
+
+<div class="side-cart" id="sideCart">
+
+    <div class="cart-header">
+
+        <h2>Seu Carrinho</h2>
+
+        <button onclick="closeCart()">
+            ✕
+        </button>
+
+    </div>
+
+    <div class="cart-items"></div>
+
+    <div class="cart-footer">
+
+        <h3>
+            Total:
+            <span class="cart-total">
+                R$ 0
+            </span>
+        </h3>
+
+        <a href="checkout.html">
+
+            <button class="checkout-button">
+                Finalizar Compra
+            </button>
+
+        </a>
+
+    </div>
+
+</div>
+<!-- TOAST -->
+
+<div class="toast" id="toast">
+
+    <div class="toast-content">
+
+        <span class="toast-icon">
+            ✓
+        </span>
+
+        <div>
+
+            <h4>
+                Produto adicionado
+            </h4>
+
+            <p id="toastText">
+                Perfume adicionado ao carrinho
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- OVERLAY -->
+
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<!-- MINI CART -->
+
+<div class="side-cart" id="sideCart">
+
+    <div class="cart-header">
+
+        <h2>Seu Carrinho</h2>
+
+        <button onclick="closeCart()">
+            ✕
+        </button>
+
+    </div>
+
+    <div class="cart-items"></div>
+
+    <div class="cart-footer">
+
+        <h3>
+            Total:
+            <span class="cart-total">
+                R$ 0
+            </span>
+        </h3>
+
+        <a href="checkout.html">
+
+            <button class="checkout-button">
+                Finalizar Compra
+            </button>
+
+        </a>
+
+    </div>
+
+</div>
+
+<!-- TOAST -->
+
+<div class="toast" id="toast">
+
+    <div class="toast-content">
+
+        <span class="toast-icon">
+            ✓
+        </span>
+
+        <div>
+
+            <h4>
+                Produto adicionado
+            </h4>
+
+            <p id="toastText">
+                Perfume adicionado ao carrinho
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- FOOTER PREMIUM -->
+
+<footer class="luxury-footer">
+
+    <div class="footer-line"></div>
+
+    <p class="footer-copy">
+
+        © 2026 ÉLIXIR PERFUMARIA.
+        Todos os direitos reservados.
+
+    </p>
+
+    <div class="footer-links">
+
+        <a href="#">
+            Instagram
+        </a>
+
+        <a href="#">
+            WhatsApp
+        </a>
+
+        <a href="#">
+            Pinterest
+        </a>
+
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

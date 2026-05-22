@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chanel | ÉLIXIR</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="chanel.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<header>
+
+  <div class="logo">
+    ÉLIXIR
+  </div>
+
+  <nav>
+
+    <a href="index.html">Início</a>
+
+    <a href="#products">Coleção</a>
+
+  </nav>
+
+  <div class="cart-button" onclick="openCart()">
+
+🛒
+
+<span class="cart-count">
+0
+</span>
+
+</div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="overlay">
+
+    <span>COLLECTION</span>
+
+    <h1>
+    Chanel
+    </h1>
+
+    <p>
+      Elegância minimalista e sofisticação atemporal.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- PRODUTOS -->
+
+<section class="products-section" id="products">
+
+  <div class="section-title">
+
+    <span>CHANEL</span>
+
+    <h2>Fragrâncias Icônicas</h2>
+
+  </div>
+
+  <div class="products-grid">
+
+    <!-- CARD -->
+
+    <div class="product-card">
+
+      <img src="https://cdn.awsli.com.br/600x450/364/364776/produto/100088853/893de80128.jpg">
+
+      <div class="product-info">
+
+        <h3>Chanel Coco Mademoiselle</h3>
+
+        <p class="price">
+          R$ 899
+        </p>
+
+       <button onclick="addToCart(
+'Chanel Coco Mademoiselle',
+899,
+'https://cdn.awsli.com.br/600x450/364/364776/produto/100088853/893de80128.jpg'
+)">
+Adicionar ao Carrinho
+</button>
+
+      </div>
+
+    </div>
+
+    <!-- CARD -->
+
+    <div class="product-card">
+
+      <img src="https://i.pinimg.com/1200x/6f/db/a0/6fdba0bf644d1ac4a74d26c81683bb15.jpg">
+
+      <div class="product-info">
+
+        <h3>Chanel No. 5</h3>
+
+        <p class="price">
+          R$ 1.040
+        </p>
+
+         <button onclick="addToCart(
+'Chanel No. 5',
+1040,
+'https://i.pinimg.com/1200x/6f/db/a0/6fdba0bf644d1ac4a74d26c81683bb15.jpg'
+)">
+Adicionar ao Carrinho
+</button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- OVERLAY -->
+
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<!-- MINI CART -->
+
+<div class="side-cart" id="sideCart">
+
+    <div class="cart-header">
+
+        <h2>Seu Carrinho</h2>
+
+        <button onclick="closeCart()">
+            ✕
+        </button>
+
+    </div>
+
+    <div class="cart-items"></div>
+
+    <div class="cart-footer">
+
+        <h3>
+            Total:
+            <span class="cart-total">
+                R$ 0
+            </span>
+        </h3>
+
+        <a href="checkout.html">
+
+            <button class="checkout-button">
+                Finalizar Compra
+            </button>
+
+        </a>
+
+    </div>
+
+</div>
+
+<!-- TOAST -->
+
+<div class="toast" id="toast">
+
+    <div class="toast-content">
+
+        <span class="toast-icon">
+            ✓
+        </span>
+
+        <div>
+
+            <h4>
+                Produto adicionado
+            </h4>
+
+            <p id="toastText">
+                Perfume adicionado ao carrinho
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

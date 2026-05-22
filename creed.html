@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Creed | ÉLIXIR</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="creed.css">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+  <div class="logo">
+    ÉLIXIR
+  </div>
+
+  <nav>
+
+    <a href="index.html">
+      Início
+    </a>
+
+    <a href="#products">
+      Coleção
+    </a>
+
+  </nav>
+
+<div class="cart-button" onclick="openCart()">
+
+🛒
+
+<span class="cart-count">
+0
+</span>
+
+</div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="overlay">
+
+    <span>COLLECTION</span>
+
+    <h1>
+      CREED
+    </h1>
+
+    <p>
+      Exclusividade aristocrática e presença inesquecível.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- PRODUTOS -->
+
+<section class="products-section" id="products">
+
+  <div class="section-title">
+
+    <span>CREED</span>
+
+    <h2>Fragrâncias Refinadas</h2>
+
+  </div>
+
+  <div class="products-grid">
+
+    <!-- CARD -->
+
+    <div class="product-card">
+
+      <img src="https://m.media-amazon.com/images/I/710HXzbWPKL.jpg">
+
+      <div class="product-info">
+
+        <h3>Creed Aventus</h3>
+
+        <p class="price">
+          R$ 3.788
+        </p>
+
+         <button onclick="addToCart(
+'Creed Aventus',
+3788,
+'https://m.media-amazon.com/images/I/710HXzbWPKL.jpg'
+)">
+Adicionar ao Carrinho
+</button>
+      </div>
+
+    </div>
+
+    <!-- CARD -->
+
+    <div class="product-card">
+
+      <img src="https://opaque.vteximg.com.br/arquivos/ids/424931/CREE-05-000015.png?v=638370685777330000">
+
+      <div class="product-info">
+
+        <h3>Creed Green Irish Tweed</h3>
+
+        <p class="price">
+          R$ 4.190
+        </p>
+
+        <button onclick="addToCart(
+'Creed Green Irish Tweed',
+4190,
+'https://opaque.vteximg.com.br/arquivos/ids/424931/CREE-05-000015.png?v=638370685777330000'
+)">
+Adicionar ao Carrinho
+</button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- OVERLAY -->
+
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<!-- MINI CART -->
+
+<div class="side-cart" id="sideCart">
+
+    <div class="cart-header">
+
+        <h2>Seu Carrinho</h2>
+
+        <button onclick="closeCart()">
+            ✕
+        </button>
+
+    </div>
+
+    <div class="cart-items"></div>
+
+    <div class="cart-footer">
+
+        <h3>
+            Total:
+            <span class="cart-total">
+                R$ 0
+            </span>
+        </h3>
+
+        <a href="checkout.html">
+
+            <button class="checkout-button">
+                Finalizar Compra
+            </button>
+
+        </a>
+
+    </div>
+
+</div>
+
+<!-- TOAST -->
+
+<div class="toast" id="toast">
+
+    <div class="toast-content">
+
+        <span class="toast-icon">
+            ✓
+        </span>
+
+        <div>
+
+            <h4>
+                Produto adicionado
+            </h4>
+
+            <p id="toastText">
+                Perfume adicionado ao carrinho
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#f4f4f1;
+  color:#1f1f1f;
+}
+
+/* HEADER */
+
+header{
+
+  position:fixed;
+
+  top:0;
+  left:0;
+
+  width:100%;
+
+  padding:20px 8%;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  background:
+  rgba(244,244,241,0.82);
+
+  backdrop-filter:blur(14px);
+
+  z-index:999;
+
+}
+
+.logo{
+
+  font-size:34px;
+
+  font-weight:700;
+
+  letter-spacing:5px;
+
+  color:#1d3b2f;
+
+}
+
+/* NAV */
+
+nav{
+
+  display:flex;
+
+  gap:40px;
+
+}
+
+nav a{
+
+  text-decoration:none;
+
+  color:#1d3b2f;
+
+  font-weight:500;
+
+}
+
+/* CART */
+
+.cart-button{
+
+  width:90px;
+
+  height:48px;
+
+  border-radius:50px;
+
+  background:
+  linear-gradient(135deg,#1d3b2f,#355e4c);
+
+  color:white;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  font-weight:600;
+
+}
+
+/* HERO */
+
+.hero{
+
+  height:100vh;
+
+  background:
+  linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.75)),
+  url('https://i.pinimg.com/1200x/38/cc/9a/38cc9a1b314d9274ec58815772cb9b1b.jpg');
+
+  background-size:cover;
+  background-position:center;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+
+}
+
+.overlay span{
+
+  letter-spacing:4px;
+
+  color:#d8c08f;
+
+}
+
+.overlay h1{
+
+  font-size:90px;
+
+  margin:20px 0;
+
+  color:#d8c08f;
+
+}
+
+.overlay p{
+
+  font-size:22px;
+
+  color:white;
+
+}
+
+/* SECTION */
+
+.products-section{
+
+  padding:120px 8%;
+
+}
+
+.section-title{
+
+  text-align:center;
+
+  margin-bottom:60px;
+
+}
+
+.section-title span{
+
+  background:#dce5de;
+
+  color:#1d3b2f;
+
+  padding:10px 20px;
+
+  border-radius:30px;
+
+}
+
+.section-title h2{
+
+  font-size:55px;
+
+  margin-top:20px;
+
+  color:#1d3b2f;
+
+}
+
+/* GRID */
+
+.products-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(280px,1fr));
+
+  gap:35px;
+
+}
+
+/* CARD */
+
+.product-card{
+
+  background:white;
+
+  border-radius:30px;
+
+  overflow:hidden;
+
+  transition:0.4s;
+
+}
+
+.product-card:hover{
+
+  transform:translateY(-10px);
+
+  box-shadow:
+  0 20px 40px rgba(0,0,0,0.08);
+
+}
+
+.product-card img{
+
+  width:100%;
+  height:340px;
+
+  object-fit:cover;
+
+}
+
+.product-info{
+
+  padding:25px;
+
+}
+
+.price{
+
+  font-size:24px;
+
+  font-weight:700;
+
+  color:#1d3b2f;
+
+  margin:15px 0;
+
+}
+
+/* BUTTON */
+
+.product-card button{
+
+  width:100%;
+
+  padding:18px;
+
+  border:none;
+
+  border-radius:18px;
+
+  background:
+  linear-gradient(135deg,#1d3b2f,#355e4c);
+
+  color:white;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:0.3s;
+
+}
+
+.product-card button:hover{
+
+  transform:translateY(-4px);
+
+}
